@@ -1,0 +1,91 @@
+#process-block {
+  & .container {
+    padding-top: 120px;
+    padding-bottom: 55px;
+  }
+}
+.process__intro {
+  @include text--center;
+  & .process-intro__heading{
+    margin-bottom: 30px;
+  }
+  & .process-intro__desc {
+    padding: 0 103px;
+    letter-spacing: 0.2px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 39.5px;
+    margin-bottom: 70px;
+  }
+}
+.stages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.stage {
+  margin-bottom: 85px;
+  width: 320px;
+  padding: 0 11px;
+  text-align: center;
+  color: #000;
+  & .stage__icon {
+    aspect-ratio: 1;
+    width: 76px;
+  }
+  & .stage__name {
+    padding: 5px 7px 10px;
+    line-height: 31px;
+  }
+  & .stage__desc {
+    font-size: 18px;
+  }
+}
+
+@include desktop {
+}
+@include tablet {
+  #process-block {
+  }
+  .process__intro {
+    & .process-intro__desc {
+      padding: 0 26px;
+    }
+  }
+  .stage {
+    margin-bottom: 80px;
+  }
+  .stages {
+    padding: 0 85px;
+  }
+}
+@include mobile {
+  #process-block {
+    & .container {
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+  }
+  .process__intro {
+    & .process-intro__heading{
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    & .process-intro__desc {
+      padding: 0;
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 40px;
+    }
+  }
+  .stages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .stage {
+    margin-bottom: 80px;
+    width: 335px;
+    padding: 0 9.5px;
+  }
+}

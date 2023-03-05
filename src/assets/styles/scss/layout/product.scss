@@ -1,0 +1,121 @@
+#product-block {
+  & .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.product {
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.product__info {
+  width: 45.78%;
+  & .product__name {
+    line-height: 76px;
+    margin-bottom: 40px;
+  }
+  & .product__desc {
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 80px;
+    padding-right: 25px;
+    color:rgba(128, 128, 128, 1); 
+  }
+  & .view-btn {
+    @extend .btn;
+    padding: 12px 58.2px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 8px;
+  }
+}
+.product__illus {
+  width: 42.105%;
+}
+.product--ill-lefted {
+}
+.product--ill-righted {
+  flex-direction: row-reverse;
+}
+
+@include tablet{
+  #product-block {
+    & .container {
+      padding-top: 100px;
+      padding-bottom: 40px;
+    }
+  }
+  .product__info {
+    width: 50%;
+    & .product__name {
+      font-size: 58px;
+      line-height: 60px;
+      margin-bottom: 20px;
+    }
+    & .product__desc {
+      font-size: 14px;
+      line-height: 28.5px;
+      margin-bottom: 46px;
+    }
+  }
+  .product__illus {
+    width: 50%;
+  }
+  .product--ill-lefted {
+    & .product__info {
+      padding-left: 24px;
+    }
+    & .product__illus {
+      padding-right: 28px;
+    }
+  }
+  .product--ill-righted {
+    & .product__info {
+      padding-right: 24px;
+    }
+    & .product__illus {
+      padding-left: 28px;
+    }
+  }
+}
+@include mobile {
+  #product-block {
+    & .container {
+      padding: 92px 16px 15px;
+    }
+  }
+  .product {
+    margin: 0 0 55px;
+    flex-direction: column;
+  }
+  .product__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    & .product__name {
+      line-height: 41.5px;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    & .product__desc {
+      font-size: 14px;
+      line-height: 28.5px;
+      margin-bottom: 40px;
+      padding: 0px;
+    }
+    & .view-btn {
+      width: 100% !important;
+    }
+  }
+  .product__illus {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .product--ill-lefted {
+  }
+  .product--ill-righted {
+    // flex-direction: row-reverse;
+  }
+}

@@ -1,0 +1,127 @@
+#banner-block {
+  background-image: url("https://res.cloudinary.com/diowgvamj/image/upload/v1677785480/project2/banner_mdnz6q.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  & .container {
+    height: 100vh;
+    justify-content: center;
+  }
+}
+
+.banner__intro {
+  width: 665px;
+}
+.intro-text__heading {
+  line-height: 82px;
+  margin-bottom: 20px;
+}
+.intro-text__desc {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0.2;
+}
+.banner-intro__search {
+  border-radius: 8px;
+  width: 502px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 50px;
+  padding: 6px;
+  & input {
+    border: 0;
+    width: 70%;
+    &::placeholder {
+      line-height: 36px;
+      padding-left: 26px;
+      font-size: 16px;
+      @include input-text;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  & button {
+    @extend .btn;
+    padding: 12px 38px 11px 37px;
+    border-radius: 8px;
+    @include input-text;
+  }
+}
+
+@include desktop {
+  #banner-block .container {
+    max-height: 754px;
+  }
+}
+@include tablet {
+  #banner-block .container {
+    max-height: 647px;
+  }
+  .banner-intro__text{
+    .intro-text__heading {
+      font-size: 56px;
+      line-height: 73.5px;
+      margin-bottom: 20px;
+    }
+    .intro-text__desc {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+  .banner-intro__search {
+    width: 422px;
+    & button {
+      padding: 12px 25px;
+    }
+  }
+}
+@include mobile {
+  #banner-block {
+    // background-image: url("https://res.cloudinary.com/diowgvamj/image/upload/v1677785480/project2/banner_mdnz6q.svg");
+    background: radial-gradient(
+        118.67% 101.66% at 141.47% 78.12%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url("https://res.cloudinary.com/diowgvamj/image/upload/v1677785480/project2/banner_mdnz6q.svg");
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    & .container {
+      max-height: 601px;
+    }
+
+  }
+  .banner__intro{
+    text-align: center;
+    width: fit-content;
+  }
+  .banner-intro__text {
+    & .intro-text__heading {
+      font-size: 42px;
+      line-height: 57.5px;
+      margin-bottom: 20px;
+    }
+    & .intro-text__desc {
+      font-size: 12px;
+      line-height: 23px;
+    }
+  }
+  .banner-intro__search {
+    width: 100%;
+    max-width: 422px;
+    & input {
+      &::placeholder {
+        padding-left: 20px;
+        font-size: 14px;
+        @include input-text;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    & button {
+      padding: 15px 18px;
+      font-size: 14px;
+      line-height: 19.12px;
+    }
+  }
+}

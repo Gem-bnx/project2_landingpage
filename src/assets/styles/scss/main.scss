@@ -1,0 +1,76 @@
+@import "./base/all.scss";
+@import "./layout/all.scss";
+* {
+  font-family: Manrope;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+}
+// -------------COMMON
+section{
+  height: fit-content !important;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 24px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  color: #fff;
+  background-color: $mainColor1;
+  border: 0;
+  cursor: pointer;
+  width: fit-content;
+}
+.btn:hover {
+  background-color: #000;
+  color: $mainColor1;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+// ------RESPONSIVE
+@include desktop {
+  .container {
+    max-width: 1200px;
+  }
+}
+@include tablet {
+  .container {
+    max-width: 904px;
+  }
+}
+@include mobile {
+  .container {
+    padding:0 20px;
+  }
+}
